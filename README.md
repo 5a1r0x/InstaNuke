@@ -31,3 +31,14 @@ cd InstaNuke
 pip install -r requirements.txt
 python3 instanuke.py
 ```
+
+## Usage
+
+```bash
+usage: enter a valid instagram username and wordlist path
+
+username: user
+wordlist: wordlist.txt or Path/To/Wordlist
+
+use ethically and responsibly
+```
