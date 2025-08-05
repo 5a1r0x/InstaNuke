@@ -29,6 +29,7 @@ source nukeig/bin/activate
 git clone https://github.com/5a1r0x/InstaNuke.git
 cd InstaNuke
 pip install -r requirements.txt
+chmod +x instanuke.py
 python3 instanuke.py
 ```
 
