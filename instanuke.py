@@ -100,6 +100,7 @@ class InstaNuke:
 
     def attempt_login(self, username, password):
         global data
+        global response
         self.human_delay()
         self.request_count += 1
         self.ghost_counter += 1
@@ -167,15 +168,15 @@ def tfa_info():
 
 def banner():
     print(rf"""
- ██▓ ███▄    █   ██████ ▄▄▄█████▓ ▄▄▄       ███▄    █  █    ██  ██ ▄█▀▓█████ 
-▓██▒ ██ ▀█   █ ▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██ ▀█   █  ██  ▓██▒ ██▄█▒ ▓█   ▀ 
-▒██▒▓██  ▀█ ██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▓██  ▀█ ██▒▓██  ▒██░▓███▄░ ▒███   
-░██░▓██▒  ▐▌██▒  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▓██▒  ▐▌██▒▓▓█  ░██░▓██ █▄ ▒▓█  ▄ 
+ ██▓ ███▄    █   ██████ ▄▄▄█████▓ ▄▄▄       ███▄    █  █    ██  ██ ▄█▀▓█████
+▓██▒ ██ ▀█   █ ▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██ ▀█   █  ██  ▓██▒ ██▄█▒ ▓█   ▀
+▒██▒▓██  ▀█ ██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▓██  ▀█ ██▒▓██  ▒██░▓███▄░ ▒███
+░██░▓██▒  ▐▌██▒  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▓██▒  ▐▌██▒▓▓█  ░██░▓██ █▄ ▒▓█  ▄
 ░██░▒██░   ▓██░▒██████▒▒  ▒██▒ ░  ▓█   ▓██▒▒██░   ▓██░▒▒█████▓ ▒██▒ █▄░▒████▒
 ░▓  ░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░    ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ▒ ▒▒ ▓▒░░ ▒░ ░
  ▒ ░░ ░░   ░ ▒░░ ░▒  ░ ░    ░      ▒   ▒▒ ░░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░▒ ▒░ ░ ░  ░
- ▒ ░   ░   ░ ░ ░  ░  ░    ░        ░   ▒      ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░   
- ░           ░       ░                 ░  ░         ░    ░     ░  ░      ░  ░                                
+ ▒ ░   ░   ░ ░ ░  ░  ░    ░        ░   ▒      ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░
+ ░           ░       ░                 ░  ░         ░    ░     ░  ░      ░  ░
 """)
 
 def main():
@@ -203,12 +204,15 @@ def main():
 
             success, message = auditor.attempt_login(username, password)
 
-            if success:
+            if success or message == 'checkpoint_required':
                 print(f"\n[{Colors.GREEN}success{Colors.RESET}] username: {Colors.GREEN}{username}{Colors.RESET}  password: {Colors.GREEN}{password}{Colors.RESET}")
-                print(f"\n[{Colors.YELLOW}result{Colors.RESET}] message: {Colors.YELLOW}{message}{Colors.RESET}")
                 if '2FA' in message:
                     tfa_info()
-                break
+                else:
+                     print(f"[{Colors.BLUE}{message}{Colors.RESET}]")
+                     break
+            else:
+                 print(f"[RESULT] {message} {response.status_code} | {response.reason}")
 
     except KeyboardInterrupt:
         print(f"\n{Colors.YELLOW}InstaNuke Interrupted{Colors.RESET}")
