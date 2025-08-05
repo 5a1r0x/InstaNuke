@@ -35,7 +35,7 @@ python3 instanuke.py
 ## Usage
 
 ```bash
-usage: enter a valid instagram username and wordlist path
+enter a valid instagram username and wordlist path
 
 username: user
 wordlist: wordlist.txt or Path/To/Wordlist
