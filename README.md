@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="InstaNukeLogo.png" alt="Logo" width="500">
+  <img src="assets/instanukelogo.png" alt="Logo" width="500">
 </div>
 
 <h1 align="center">InstaNuke</h1>
@@ -11,7 +11,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/Python-3.8%2B-lightblue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-GNU%33.0-blue)](https://opensource.org/license/gpl-3-0)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Platform](https://img.shields.io/badge/Platform-Terminal%20%7C%20Interactive-darkblue.svg)
 
 </div>
