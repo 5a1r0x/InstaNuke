@@ -40,6 +40,7 @@ InstaNuke
 │   ├── instanuke.py
 │   ├── requirements.txt
 │   ├── wordlist.txt
+│   ├── wordlist_common_passwords.txt
 ├── .gitignore
 ├── LICENSE
 ├── README.md
