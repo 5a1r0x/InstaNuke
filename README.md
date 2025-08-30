@@ -10,17 +10,53 @@
 
 <div align="center">
 
-[![Python Version](https://img.shields.io/badge/Python-3.8%2B-lightblue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Platform](https://img.shields.io/badge/Platform-Terminal%20%7C%20Interactive-darkblue.svg)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-4FC3F7?logo=python&logoColor=white)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-1.0-29B6F6?logo=github&logoColor=white)](https://github.com/5a1r0x/InstaNuke)
+[![License](https://img.shields.io/badge/License-MIT-1565C0?logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+[![Interface](https://img.shields.io/badge/Interface-Terminal-0D47A1?logo=gnubash&logoColor=white)](https://github.com/5a1r0x/IPSherlock)
 
 </div>
+
+## Major Features
+```plaintext
+• Automatic Requests
+• Response Management
+• Multi Platform
+• Code Detection
+• Enterprise Ready
+```
+
+## Project Structure
+
+```plaintext
+InstaNuke
+├── assets/
+│   └── instanukelogo.png
+├── docs/
+│   ├── CONTRIBUTING.md
+│   ├── DISCLAIMER.md
+│   └── PREREQUISITES.md
+├── nuke/
+│   ├── instanuke.py
+│   ├── requirements.txt
+│   ├── wordlist.txt
+├── .gitignore
+├── LICENSE
+├── README.md
+└── 1.0
+```
 
 ## Virtual Environment
 Linux
 ```bash
-python3 -m venv nukeig
-source nukeig/bin/activate
+python3 -m venv nukelinux
+source nukelinux/bin/activate
+```
+
+MacOS
+```bash
+python3 -m venv nukemacos
+source nukemacos/bin/activate
 ```
 
 ## Installation
@@ -28,6 +64,7 @@ source nukeig/bin/activate
 ```bash
 git clone https://github.com/5a1r0x/InstaNuke.git
 cd InstaNuke
+cd nuke
 pip install -r requirements.txt
 chmod +x instanuke.py
 python3 instanuke.py
@@ -36,10 +73,9 @@ python3 instanuke.py
 ## Usage
 
 ```bash
-enter a valid instagram username and wordlist path
 
-username: user
-wordlist: wordlist.txt or Path/To/Wordlist
+username: instagram username
+wordlist: wordlist.txt or path/to/wordlist
 
 use ethically and responsibly
 ```
