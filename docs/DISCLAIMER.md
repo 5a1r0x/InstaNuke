@@ -15,11 +15,15 @@ Do not use **InstaNuke** software for:
 - Any **illegal activity** or for **personal revenge**
 
 ## [3.0] Responsibility
+Use **InstaNuke** responsibly:
+
 - The developer is **not responsible** for **misuse**, **unauthorized disclosure** or **paid disclosure** <br>
 - Users who use the **software** are asked to **report vulnerabilities** or **problems**  <br>
 - Use in **military** or **government** contexts requires **specific permission** <br>
 
 ## [4.0] Ethics
+Use **InstaNuke** ethically:
+
 - Always respect **local laws** <br>
 - Do not collect **personal data** without consent <br>
 - **Report** improper or illicit use
